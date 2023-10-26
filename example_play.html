@@ -8,8 +8,9 @@
     body {
         margin: 0;
     }
+
     #player-container {
-	    
+	    width: 100%;
     }
     </style>
 
@@ -22,17 +23,10 @@
 
     <script type="text/javascript">
     (function() {
-        var params = {},
-            pairs = location.search ? location.search.substring(1).split(/&/) : [],
-            i, keyval;
-        for (i = 0; i < pairs.length; i++) {
-            keyval = pairs[i].split(/\=/);
-            params[keyval[0]] = keyval[1];
-        }
         window.player = new eidogo.Player({
             container:       "player-container",
             theme:           "compact",
-	    sgfPath: "sgf/",
+            sgfUrl:          "sgf/blank.sgf"),
             enableShortcuts: true
         });    
     })();
