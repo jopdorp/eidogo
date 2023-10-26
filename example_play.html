@@ -8,6 +8,9 @@
     body {
         margin: 0;
     }
+    #player-container {
+	    width: 100%;
+    }
     </style>
 
     <script type="text/javascript" src="player/js/all.compressed.js"></script>
@@ -29,7 +32,6 @@
         window.player = new eidogo.Player({
             container:       "player-container",
             theme:           "compact",
-            sgfUrl:          "sgf/" + (params.sgf ? params.sgf : "example.sgf"),
             enableShortcuts: true
         });    
     })();
